@@ -1,16 +1,60 @@
-html,
-body {
-  padding: 0;
+body,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ddd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-* {
-  box-sizing: border-box;
+.posts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.card-header {
+  border-bottom: 1px solid #c4c4c4;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.card-body {
+  line-height: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .posts-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .posts-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
